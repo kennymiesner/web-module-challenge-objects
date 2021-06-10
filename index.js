@@ -48,20 +48,36 @@ Using the burger object below do the following:
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
 
+// export const burger = {
+//   name: "Burger", 
+//   price: 18, 
+//   category: "Lunch", 
+//   discount: function(string){
+//     if (string === "teacher" || string === "student") {
+//       return burger.price - (burger.price * .25);
+//     } else if (string === "public"){
+//       return burger.price - (burger.price * .1);
+//     }
+//   }
+// }
+
+// console.log(`Task 2: Teacher Price = $${burger.discount("teacher")}`,`, Student Price = $${burger.discount("student")}`,`, Public Price = $${burger.discount("public")}`)
+
 export const burger = {
-  name: "Burger", 
-  price: 18, 
-  category: "Lunch", 
-  discount: function(string){
-    if (string === "teacher" || string === "student") {
-      return burger.price - (burger.price * .25);
-    } else {
-      return burger.price - (burger.price * .1);
+  name: "Burger",
+  price: 18,
+  category: "Lunch",
+  /*Your code here*/
+  discount: function(person) {
+    if(person === "teacher" || person === "student") {
+      return this.price - (this.price * 0.25);
+    } else if(person === "public") {
+      return this.price - (this.price * 0.10);
     }
   }
 }
 
-console.log(`Task 2: Teacher Price = $${burger.discount("teacher")}`,`, Student Price = $${burger.discount("student")}`,`, Public Price = $${burger.discount("public")}`)
+console.log(`Task 2: Teacher Price = $${burger.discount("teacher")}`,`, Student Price = $${burger.discount("student")}`,`, Public Price = $${burger.discount("public")}`);
 
 
 
@@ -74,7 +90,7 @@ const reviews = [
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
-    {name: "Reyna", rating: 3.5, feedback: ""},
+    {name: "Reyna", rating: 3.5, feedback: "this place is chill with really cool people, great for getting work done on weekdays"},
 ]
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -94,10 +110,10 @@ Using the reviews array above do the following: (no function needed)
 let newObject = {
   name: "Kenny",
   rating: 5,
-  feedback: "This is the new feedback.",
+  feedback: "This is the new feedback that I made up for this task.",
 }
 
-reviews.push(newObject);
+reviews.unshift(newObject);
 
 console.log(`Task 4:`, reviews);
 
@@ -147,9 +163,13 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
+function getLastReview(array, i) {
+  for(let i = 0; i < array.length; i++) {
+    ;
+  }
+}
+
+console.log(`Task 6:`, getLastReview(reviews, 8));
 
 
 
