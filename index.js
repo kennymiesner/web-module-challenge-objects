@@ -19,6 +19,8 @@ function createMenuItem(name, price, category){
     return {name, price, category};
 }
 
+console.log(`Task 1A:`, createMenuItem());
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -50,8 +52,16 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(string){
+    if (string === "teacher" || string === "student") {
+      return burger.price - (burger.price * .25);
+    } else {
+      return burger.price - (burger.price * .1);
+    }
+  }
 }
+
+console.log(`Task 2: Teacher Price = $${burger.discount("teacher")}`,`, Student Price = $${burger.discount("student")}`,`, Public Price = $${burger.discount("public")}`)
 
 
 
